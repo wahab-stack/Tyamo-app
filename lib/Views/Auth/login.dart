@@ -9,9 +9,11 @@ void main() {
 class Login extends StatelessWidget {
   final RoundedLoadingButtonController _btnController =
       RoundedLoadingButtonController();
-  void loginbtn() {
-    print("Button is pressed");
-  }
+
+  // Login({super.key});
+  // void loginbtn() {
+  //   print("Button is pressed");
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -39,13 +41,13 @@ class Login extends StatelessWidget {
                 Row(
                   children: [
                     Text(
-                      "Sign-in into Saddam Steel Works",
+                      "Sign-in into Indus Steel Works",
                       style: GoogleFonts.poppins(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    Container(
+                    SizedBox(
                       height: 30,
                       width: 30,
                       child: Image.asset(
@@ -107,9 +109,20 @@ class Login extends StatelessWidget {
             ),
             SizedBox(height: 30),
             RoundedLoadingButton(
+              width: 2000,
+              borderRadius: 10,
               controller: _btnController,
-              onPressed: loginbtn,
-              child: Text('login'),
+              color: Color(0xff00C1AA),
+              onPressed: () {},
+              child: Text(
+                'Login',
+                style: GoogleFonts.poppins(
+                  color: Colors.white,
+                  fontSize: 16,
+                  fontWeight: FontWeight.w600,
+                  letterSpacing: 1,
+                ),
+              ),
             ),
           ],
         ),
