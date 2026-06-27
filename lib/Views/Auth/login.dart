@@ -124,6 +124,41 @@ class Login extends StatelessWidget {
                 ),
               ),
             ),
+            SizedBox(height: 30),
+            Container(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                "Forget Password?",
+                style: GoogleFonts.poppins(
+                  color: const Color(0xffC1272D),
+                  fontWeight: FontWeight.normal,
+                  fontSize: 12,
+                  letterSpacing: 0.5,
+                ),
+              ),
+            ),
+            SizedBox(height: 30),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "Don't have an account? ",
+                  style: GoogleFonts.poppins(
+                    fontWeight: FontWeight.w500,
+                    fontSize: 12,
+                    color: const Color(0xff5A5858),
+                  ),
+                ),
+                Text(
+                  "Sign Up",
+                  style: GoogleFonts.poppins(
+                    color: const Color(0xff2F76EA),
+                    fontWeight: FontWeight.w700,
+                    fontSize: 13,
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),
