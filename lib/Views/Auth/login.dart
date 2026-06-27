@@ -9,7 +9,7 @@ void main() {
 }
 
 class Login extends StatelessWidget {
-  final RoundedLoadingButtonController _btnController =
+  final RoundedLoadingButtonController _LoginBtnController =
       RoundedLoadingButtonController();
 
   // Login({super.key});
@@ -32,7 +32,7 @@ class Login extends StatelessWidget {
         centerTitle: true,
       ),
       body: Padding(
-        padding: const EdgeInsets.all(30),
+        padding: const EdgeInsets.all(20),
         child: Column(
           children: [
             new AuthHeading(
@@ -62,7 +62,7 @@ class Login extends StatelessWidget {
             RoundedLoadingButton(
               width: 2000,
               borderRadius: 10,
-              controller: _btnController,
+              controller: _LoginBtnController,
               color: Color(0xff00C1AA),
               onPressed: () {},
               child: Text(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tyamo/Views/Auth/login.dart';
+import 'package:tyamo/Views/Auth/register.dart';
 
 void main() {
   runApp(Tyamo());
@@ -13,7 +14,7 @@ class Tyamo extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Saddam Steel Works',
-      home: Login(),
+      home: Register(),
     );
   }
 }
