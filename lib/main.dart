@@ -14,7 +14,7 @@ class Tyamo extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Saddam Steel Works',
-      home: Register(),
+      home: Login(),
     );
   }
 }
