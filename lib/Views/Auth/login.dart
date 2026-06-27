@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rounded_loading_button_plus/rounded_loading_button.dart';
+import 'package:tyamo/Views/Widgets/Auth/Auth_heading.dart';
+import 'package:tyamo/Views/Widgets/Auth/Auth_text_field.dart';
 
 void main() {
   runApp(Login());
@@ -33,79 +35,28 @@ class Login extends StatelessWidget {
         padding: const EdgeInsets.all(30),
         child: Column(
           children: [
-            Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SizedBox(height: 70),
-                Row(
-                  children: [
-                    Text(
-                      "Sign-in into Indus Steel Works",
-                      style: GoogleFonts.poppins(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    SizedBox(
-                      height: 30,
-                      width: 30,
-                      child: Image.asset(
-                        "assets/images/symbol.png",
-                        filterQuality: FilterQuality.high,
-                      ),
-                    ),
-                  ],
-                ),
-                Text(
-                  "To connect with Your partner",
-                  style: GoogleFonts.poppins(fontSize: 18),
-                ),
-              ],
+            new AuthHeading(
+              maintext: "Sign-in into Indus Steel Works",
+              subtext: "To connect with Your partner",
+              logo: "assets/images/symbol.png",
+              fontsize: 18,
+              logosize: 30,
             ),
             SizedBox(height: 30),
-            TextField(
-              textInputAction: TextInputAction.none,
-              textAlign: TextAlign.start,
-              obscureText: false,
-              autofocus: false,
-              style: GoogleFonts.poppins(fontSize: 15),
+            AuthTextField(
+              size: 15,
+              icon: Icons.alternate_email,
               keyboardType: TextInputType.emailAddress,
-              textAlignVertical: TextAlignVertical.center,
-              decoration: InputDecoration(
-                fillColor: Color(0xffE7E7F2),
-                filled: true,
-                prefixIcon: Icon(Icons.alternate_email, size: 15),
-                prefixIconColor: Color(0xff000221),
-                label: Text("Email"),
-                floatingLabelBehavior: FloatingLabelBehavior.never,
-                border: OutlineInputBorder(
-                  borderSide: BorderSide.none,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-              ),
+              labelText: "Email",
+              obscureText: false,
             ),
             SizedBox(height: 15),
-            TextField(
-              textInputAction: TextInputAction.none,
-              textAlign: TextAlign.start,
-              obscureText: true,
-              autofocus: false,
-              style: GoogleFonts.poppins(fontSize: 15),
+            AuthTextField(
+              size: 15,
+              icon: Icons.password,
               keyboardType: TextInputType.text,
-              textAlignVertical: TextAlignVertical.center,
-              decoration: InputDecoration(
-                fillColor: Color(0xffE7E7F2),
-                filled: true,
-                prefixIcon: Icon(Icons.alternate_email, size: 15),
-                prefixIconColor: Color(0xff000221),
-                label: Text("Password"),
-                floatingLabelBehavior: FloatingLabelBehavior.never,
-                border: OutlineInputBorder(
-                  borderSide: BorderSide.none,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-              ),
+              labelText: "Password",
+              obscureText: true,
             ),
             SizedBox(height: 30),
             RoundedLoadingButton(
